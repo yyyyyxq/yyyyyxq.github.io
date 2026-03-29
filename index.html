@@ -1,118 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal GitHub Page</title>
+    <title>个人主页</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            margin: 40px auto;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-
-        h1 {
             color: #333;
+            background-color: #f5f5f5;
         }
-
-        h2 {
-            color: #555;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-
-        img {
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .profile-photo {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            width: 200px;
-            height: 200px;
             object-fit: cover;
-            display: block;
-            margin: 0 auto 20px;
+            margin-bottom: 20px;
+            border: 3px solid #3498db;
         }
-
-        section {
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .contact-info {
+            font-size: 1.1em;
+            color: #7f8c8d;
+        }
+        
+        .section {
             margin-bottom: 40px;
         }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
+        
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
         }
-
-        li {
-            margin-bottom: 10px;
+        
+        .paper-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: transform 0.2s;
         }
-
-        a {
-            color: #0366d6;
+        
+        .paper-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .paper-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .paper-link {
+            color: #3498db;
             text-decoration: none;
+            font-weight: 500;
         }
-
-        a:hover {
+        
+        .paper-link:hover {
             text-decoration: underline;
+        }
+        
+        .patent-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
-
 <body>
-    <!-- 个人信息部分 -->
-    <section>
-        <!-- 个人照片 -->
-        <img src="yxq.jpg" alt="Your Photo">
-        <h1>杨绪祺</h1>
-        <p>博士研究生</p>
-        <p>电子邮件: <a href="mailto:xuqiyang@bit.edu.cn">xuqiyang@bit.edu.cn</a></p>
-    </section>
-
-    <!-- 关于我部分 -->
-    <section>
-        <h2>About Me</h2>
-        <p>
-            Here is a brief introduction about yourself. You can talk about your background, interests, and what you are
-            currently working on. For example:
-        </p>
-        <p>
-            I am a passionate developer with a strong interest in web development and open - source projects. I have
-            several years of experience in building web applications using modern technologies.
-        </p>
-    </section>
-
-    <!-- 技能部分 -->
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: JavaScript, Python, Java</li>
-            <li>Web Technologies: HTML, CSS, React, Node.js</li>
-            <li>Database: MySQL, MongoDB</li>
-        </ul>
-    </section>
-
-    <!-- 项目部分 -->
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <a href="https://github.com/yourusername/yourproject1">Project 1</a> - A brief description of your first
-                project.
-            </li>
-            <li>
-                <a href="https://github.com/yourusername/yourproject2">Project 2</a> - A brief description of your second
-                project.
-            </li>
-        </ul>
-    </section>
-
-    <!-- 社交媒体部分 -->
-    <section>
-        <h2>Social Media</h2>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/yourlinkedinprofile">LinkedIn</a></li>
-            <li><a href="https://twitter.com/yourtwitterhandle">Twitter</a></li>
-        </ul>
-    </section>
+    <div class="container">
+        <header>
+            <img src="yxq.jpg" alt="个人照片" class="profile-photo">
+            <h1>杨绪祺 Xuqi Yang</h1>
+            <div class="contact-info">
+                <p>邮箱: <a href="mailto:xuqiyang@bit.edu.cn">xuqiyang@bit.edu.cn</a></p>
+                <p>研究方向: 无人机视觉制导、无人机图像处理、无人机集群视觉认知统一、具身智能</p>
+            </div>
+        </header>
+        
+        <section class="section">
+            <h2>教育背景</h2>
+            <div class="paper-item">
+                <div class="paper-title">博士在读</div>
+                <p>学校: 北京理工大学</p>
+                <p>学院: 信息与电子学院</p>
+                <p>专业: 信息与通讯工程</p>
+                <p>时间: 2023-2029</p>
+            </div>
+            <div class="paper-item">
+                <div class="paper-title">学士学位</div>
+                <p>学校: 重庆大学</p>
+                <p>学院: 大数据与软件学院</p>
+                <p>专业: 数据科学与大数据技术</p>
+                <p>时间: 2019-2023</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>论文</h2>
+            <!-- 2026年 -->
+            <div class="paper-item">
+                <div class="paper-title">TPC-Tracker: A Tracker-Predictor Correlation Framework for Latency Compensation in Aerial Tracking</div>
+                <p>作者: Xuqi Yang, Yulong Xu, Renwu Sun, Tong Wang, Ning Zhang</p>
+                <p>发表于: Remote Sensing, 卷18, 期2, 页码328</p>
+                <p>年份: 2026</p>
+                <p>链接: <a href="https://doi.org/10.3390/rs18020328" class="paper-link">查看论文</a></p>
+            </div>
+            
+            <!-- 2025年 -->
+            <div class="paper-item">
+                <div class="paper-title">Adaptive Sparse Feature Location Activation Strategy for Sparse Detectors on Drone Images</div>
+                <p>作者: Yixuan Li, Yulong Xu, Pengnian Wu, Xuqi Yang, Meng Zhang</p>
+                <p>发表于: ICASSP 2025, IEEE International Conference on Acoustics, Speech and Signal Processing</p>
+                <p>年份: 2025</p>
+                <p>链接: <a href="https://doi.org/10.1109/ICASSP49660.2025.10887750" class="paper-link">查看论文</a></p>
+            </div>
+            <div class="paper-item">
+                <div class="paper-title">Graph-Based Target Association for Multi-Drone Collaborative Perception Under Imperfect Detection Conditions</div>
+                <p>作者: Qifan Tan, Xuqi Yang, Cheng Qiu, Wenzhuo Liu, Yize Li, Zhengxia Zou, Jing Huang</p>
+                <p>发表于: Drones, 卷9, 期4, 页码300</p>
+                <p>年份: 2025</p>
+                <p>链接: <a href="https://doi.org/10.3390/drones9040300" class="paper-link">查看论文</a></p>
+            </div>
+            <div class="paper-item">
+                <div class="paper-title">Multi-View, Multi-Target Tracking in Low-Altitude Scenes with UAV Involvement</div>
+                <p>作者: Pengnian Wu, Yixuan Li, Zhihao Li, Xuqi Yang, Dong Xue</p>
+                <p>发表于: Drones, 卷9, 期2, 页码138</p>
+                <p>年份: 2025</p>
+                <p>链接: <a href="https://doi.org/10.3390/drones9020138" class="paper-link">查看论文</a></p>
+            </div>
+            
+            <!-- 2024年 -->
+            <div class="paper-item">
+                <div class="paper-title">SCCMDet: Adaptive Sparse Convolutional Networks Based on Class Maps for Real-Time Onboard Detection in Unmanned Aerial Vehicle Remote Sensing Images</div>
+                <p>作者: Qifan Tan, Xuqi Yang, Cheng Qiu, Yanhuan Jiang, Jinze He, Jingshuo Liu, Yahui Wu</p>
+                <p>发表于: Remote Sensing, 卷16, 期6, 页码1031</p>
+                <p>年份: 2024</p>
+                <p>链接: <a href="https://doi.org/10.3390/rs16061031" class="paper-link">查看论文</a></p>
+            </div>
+            <div class="paper-item">
+                <div class="paper-title">面向无人机视觉制导的自适应目标跟踪方法</div>
+                <p>作者: 杨绪祺, 谭启凡, 苏航, 谭浩</p>
+                <p>发表于: 期刊论文</p>
+                <p>年份: 2024</p>
+                <p>链接: <a href="https://kns.cnki.net/kcms2/article/abstract?v=D7za5G2w26yhsF3uCRXvi8uqTR2Aw5yjeieL0kzsDcKwl0X1KJLvmoPZICCO_6XIHpKWsnpeoHSYyMqcrFcbqNrTKERALCh7GOHTuopK2QgT3Hs4GbhRhnoXwVK2qmFaMezPuKehs3TOI2zwaNp-UYKFQKSieRpicQVpZR8_ddGSklfamSNTIQ==&uniplatform=NZKPT&language=CHS" class="paper-link">查看论文</a></p>
+            </div>
+            
+            <!-- 2022年 -->
+            <div class="paper-item">
+                <div class="paper-title">Improving Graph Neural Network For Session-based Recommendation System Via Time Sessions</div>
+                <p>作者: Xuqi Yang, Xinyu Xiao, Wei Zhou, Junhao Wen</p>
+                <p>发表于: IJCNN 2022, International Joint Conference on Neural Networks</p>
+                <p>年份: 2022</p>
+                <p>链接: <a href="https://doi.org/10.1109/IJCNN55064.2022.9892520" class="paper-link">查看论文</a></p>
+            </div>
+            
+            <!-- 2021年 -->
+            <div class="paper-item">
+                <div class="paper-title">Skeleton-Based Action Recognition with Improved Graph Convolution Network</div>
+                <p>作者: Xuqi Yang, Jia Zhang, Rong Qin, Yunyu Su, Shuting Qiu, Jintian Yu, Yongxin Ge</p>
+                <p>发表于: CCBR 2021, Lecture Notes in Computer Science</p>
+                <p>年份: 2021</p>
+                <p>链接: <a href="https://doi.org/10.1007/978-3-030-86608-2_4" class="paper-link">查看论文</a></p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>专利</h2>
+            <div class="patent-item">
+                <div class="paper-title">一种基于k-means算法的弱监督行为识别方法</div>
+                <p>专利类型: 发明授权</p>
+                <p>申请(专利)号: CN202110480621.4</p>
+                <p>申请日: 2021-04-30</p>
+                <p>授权公告号: CN113033495B</p>
+                <p>授权公告日: 2022-08-02</p>
+                <p>申请人: 重庆大学</p>
+                <p>地址: 400044 重庆市沙坪坝区沙正街174号</p>
+                <p>发明人: 杨绪祺; 秦荣; 张甲; 葛永新</p>
+                <p>链接: <a href="https://kns.cnki.net/kcms2/article/abstract?v=D7za5G2w26yhsF3uCRXvi8uqTR2Aw5yjwM8R9urC9KfiwSCL66vXz3qVyG714DlrtoeuiPoEsDblLHM_iQ-OFyyp4lAAXxmo3gdT7obnnOrEcZxeaA4W6NSKbR05fdUG3lVQh_VBVCiXfIU_FrqPK3OgvlgujVcJKMBbw1gI_TbJZbxzaX4XZA==&uniplatform=NZKPT&language=CHS" class="paper-link">查看专利</a></p>
+            </div>
+            <div class="patent-item">
+                <div class="paper-title">一种用于智能交通的实时检测方法及装置</div>
+                <p>专利类型: 发明授权</p>
+                <p>申请(专利)号: CN202410173774.8</p>
+                <p>申请日: 2024-02-07</p>
+                <p>授权公告号: CN118172736B</p>
+                <p>授权公告日: 2025-01-24</p>
+                <p>申请人: 北京交通大学</p>
+                <p>地址: 100044 北京市海淀区西直门外上园村3号</p>
+                <p>发明人: 谭启凡; 邱成; 黄静; 姜延欢; 郭晓升; 郭萱; 杨绪祺; 杨昊; 邓宇; 车延凯; 李志伟</p>
+                <p>链接: <a href="https://kns.cnki.net/kcms2/article/abstract?v=D7za5G2w26xZ2K-43D6aun_M0JBy1XUIxcgjUsx-60ZIdDeBOrRi0obyDLSWXtXlTt4bbe77SBzuVuHsdRb9DT80vegj6s1ZXnIbUXEmtr2FhJeyG9PIqur84pg7HxZ7zSCKCC1KqvZIYUDErNNvM4e8rHQ6hKtdekXv06j574IcnagN2T_hKg==&uniplatform=NZKPT&language=CHS" class="paper-link">查看专利</a></p>
+            </div>
+        </section>
+    </div>
 </body>
-
 </html>
